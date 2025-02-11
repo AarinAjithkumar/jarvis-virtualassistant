@@ -11,8 +11,8 @@ engine.setProperty('rate',225)
 voices=engine.getProperty('voices')
 engine.setProperty('voice',voices[0].id)
 
-USER= config('USER')
-HOSTNAME=config('BOT')
+USER = config('USER')
+HOSTNAME = config('BOT')
 
 def speak(text):
     engine.say(text)
@@ -33,6 +33,7 @@ def search_wikipedia(query):
         return "No Wikipedia page found for your query."
     except Exception as e:
         return f"An error occurred: {e}"
+
 def greet_me():
     hour=datetime.now().hour
     if (hour>=6) and (hour<12):
